@@ -28,7 +28,7 @@ class DBConnection(object):
 
         return False
 
-with DBConnection() as conn:
+with DBConnection() as cursor:
     # 下面两句代码抛出的所有错误都可被__exit__方法所接收
-    conn.execute('SELEC')
-    print(conn.fetchall())
+    cursor.execute('SELEC')
+    print(cursor.fetchall())

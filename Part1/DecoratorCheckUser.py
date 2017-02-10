@@ -36,6 +36,6 @@ def update_info(user):
     print('Success update user info.')
 
 
-update_info(User('a', 'b'))
+# update_info(User('a', 'b'))
 
-# update_info(AnonymousUser())
+update_info(AnonymousUser())

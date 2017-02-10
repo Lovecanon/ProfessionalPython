@@ -29,7 +29,6 @@ class MyClass(object):
         return '<myClass>'
 
 
-
 if __name__ == '__main__':
     m = MyClass(10, num=20)
 

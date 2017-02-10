@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import matplotlib.pyplot as plt
-import numpy as np
 
 plt.axes(aspect=1)  # 横轴和纵轴比例为1:1
 

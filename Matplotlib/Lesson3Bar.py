@@ -33,4 +33,4 @@ def test2():
     ax.bar(x, sales_BJ, bar_width, bottom=sales_BJ)
     plt.show()
 
-test2()
+test1()

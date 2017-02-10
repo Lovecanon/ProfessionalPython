@@ -8,7 +8,7 @@ ax = fig.add_subplot(111)
 
 
 def test1():
-    # 1.绘制一维直方图
+    # 1.绘制一维直方图，直方图中的各矩形通常是连续排列
     mu = 100
     sigma = 20
     x = mu + sigma * np.random.randn(20000)
@@ -18,6 +18,7 @@ def test1():
     ax.hist(x, bins=200, normed=False)
     plt.show()
 
+
 def test2():
     # 2.绘制二维直方图
     x = np.random.randn(1000) + 2
@@ -25,4 +26,4 @@ def test2():
     ax.hist2d(x, y, bins=40)
     plt.show()
 
-test2()
+test1()

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import matplotlib.pyplot as plt
-import matplotlib.dates as m_date
+import Matplotlib.pyplot as plt
+import Matplotlib.dates as m_date
 import numpy as np
 
 fig = plt.figure()
