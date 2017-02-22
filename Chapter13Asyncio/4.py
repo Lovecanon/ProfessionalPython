@@ -71,7 +71,7 @@ def async_get(path):
     s = socket.socket()
     s.setblocking(False)
     try:
-        s.connect(('localhost', 3000))
+        s.connect(('127.0.0.1', 8000))
     except BlockingIOError as e:
         print(e)
 
@@ -84,13 +84,13 @@ def async_get(path):
     while True:
         yield from async_await(s, EVENT_READ)
 
-        received = s.recv(1000)
+        received = s.recv(1024)
         if received:
             totalReceived.append(received)
         else:
             body = (b''.join(totalReceived)).decode()
             print('--------------------------------------')
-            print(body)
+            print(body.split('\r\n\r\n')[0])
             print('--------------------------------------', 'Byte Received:', len(body), '\n\n')
             return
 
@@ -100,7 +100,7 @@ if __name__ == '__main__':
     eventLoop = EventLoop()
 
     for i in range(50):
-        eventLoop.add_task(async_get('/super-slow'))
+        eventLoop.add_task(async_get('/blog/'))
 
     eventLoop.start()
 
